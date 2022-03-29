@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { CategoryList, Filter, Footer } from '../';
+import { CategoryList, CategorySkeleton, Filter, Footer, If } from '../';
 import { Container } from './styles';
 import { useStateGlobalContext } from '../../stores/global.context';
 import { CategoryDto } from '../../services/category/category.dto';
@@ -34,13 +34,19 @@ export function Main() {
         setData(payload);
         setLoading(false);
     };
+
     return (
         <Container>
             <Filter/>
             {
-                data.map((payload: CategoryDto) => (<CategoryList data={payload} key={payload.id} />))
+                data.map((payload: CategoryDto) => (<CategoryList data={payload} key={payload.id}/>))
             }
-            <Footer/>
+            <If show={loading}>
+                <CategorySkeleton/>
+            </If>
+            <If hide={loading}>
+                <Footer/>
+            </If>
         </Container>
     )
 }

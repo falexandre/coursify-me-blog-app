@@ -5,3 +5,6 @@ export { CategoryList } from './CategoryList';
 export { CardPost } from './CardPost';
 export { CategoryTitle } from './CategoryTitle';
 export { Footer } from './Footer';
+export { If } from './AppIf';
+export { CategorySkeleton } from './CategorySkeleton';
+export { PostSkeleton } from './PostSkeleton';

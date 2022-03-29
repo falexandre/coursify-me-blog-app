@@ -34,14 +34,16 @@ export class PostDto {
     id: number;
     title: string;
     description: string;
-    uri: string;
+    featured_media: number;
+    content: string;
 
     static fromDto(entity: Post): PostDto {
         const payload = {} as PostDto;
         payload.id = entity.id;
         payload.title = entity.title?.rendered;
-        payload.description = entity?.excerpt?.rendered.replace(/[<p>|</p>]/g, "");
-        payload.uri = "https://www.holidify.com/images/cmsuploads/compressed/Bangalore_citycover_20190613234056.jpg";
+        payload.description = entity?.excerpt?.rendered.replace(/[<p>|</p>]/g, '');
+        payload.featured_media = entity.featured_media;
+        payload.content = entity.content?.rendered;
 
         return payload;
     }
