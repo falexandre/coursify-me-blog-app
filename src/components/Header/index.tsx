@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Menu } from './styles';
-import { Image, Icon } from 'native-base';
+import { Icon, Image } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
+
 const logo = require('../../../assets/logo.png');
 
 export function Header() {

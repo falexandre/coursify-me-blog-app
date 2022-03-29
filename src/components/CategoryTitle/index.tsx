@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, More, Title } from './styles';
-import { Button, Icon, Text } from 'native-base';
+import { Icon, Text } from 'native-base';
 import { MaterialIcons } from '@expo/vector-icons';
 
 interface Props {

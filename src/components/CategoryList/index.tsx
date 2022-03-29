@@ -1,16 +1,21 @@
 import React from 'react';
 import { Container, Posts } from './styles';
 import { CardPost, CategoryTitle } from '../';
+import { CategoryDto } from '../../services/category/category.dto';
 
-export function CategoryList() {
+interface Props {
+    data: CategoryDto;
+}
+
+export function CategoryList(props: Props) {
+    const { title } = props.data;
     return (
         <Container>
-            <CategoryTitle title="Teste"/>
+            <CategoryTitle title={title}/>
             <Posts>
-                <CardPost title={'The Garden City'}
-                          description={'Bengaluru (also called Bangalore) is the center of India\'s high-tech\n' +
-                              '                        industry. The city is also known for its parks and nightlife.'}
-                          uri={"https://www.holidify.com/images/cmsuploads/compressed/Bangalore_citycover_20190613234056.jpg"}></CardPost>
+                <CardPost title={'teste'}
+                          description={'teste'}
+                          uri={'https://www.holidify.com/images/cmsuploads/compressed/Bangalore_citycover_20190613234056.jpg'}></CardPost>
             </Posts>
         </Container>
     )

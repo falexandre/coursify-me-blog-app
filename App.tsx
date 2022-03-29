@@ -3,7 +3,8 @@ import { StatusBar } from 'react-native';
 import { Roboto_400Regular, Roboto_700Bold, useFonts } from '@expo-google-fonts/roboto';
 import AppLoading from 'expo-app-loading';
 import { NativeBaseProvider, extendTheme } from 'native-base';
-import Main from './src/navigation';
+import Main from './src/navigations';
+import { StateGlobalProvider } from './src/stores/global.context';
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -19,8 +20,10 @@ export default function App() {
 
     return (
         <NativeBaseProvider theme={theme}>
-            <StatusBar />
-            <Main/>
+            <StateGlobalProvider>
+                <StatusBar/>
+                <Main/>
+            </StateGlobalProvider>
         </NativeBaseProvider>
     );
 }
