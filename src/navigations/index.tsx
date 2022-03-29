@@ -17,9 +17,3 @@ export default () => {
         </NavigationContainer>
     );
 };
-
-/**
- *                              screenOptions={{
- *                                  cardStyleInterpolator: CardStyleInterpolators.forBottomSheetAndroid
- *                              }}
- */

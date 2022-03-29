@@ -1,1 +1,0 @@
-# coursify-me-blog-app
