@@ -14,6 +14,8 @@ export const Container = styled.View`
 export const Title = styled.Text`
   font: normal normal bold 22px/27px Roboto;
   color: #2AB598;
+  width: 280px;
+  text-transform: uppercase;
 `;
 
 export const More = styled.TouchableOpacity`

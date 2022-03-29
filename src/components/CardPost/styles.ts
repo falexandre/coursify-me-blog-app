@@ -8,7 +8,6 @@ export const Title = styled.Text`
 export const Description = styled.Text`
   font: normal normal normal 15px/20px Roboto;
   color: #868686;
-  
 `;
 
 export const More = styled.Text`

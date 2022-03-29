@@ -14,7 +14,7 @@ export function CategoryTitle(props: Props) {
             <Title>{title}</Title>
             <More>
                 <Text>VER MAIS</Text>
-                <Icon as={MaterialIcons} name="arrow-right" size="md" />
+                <Icon as={MaterialIcons} name="arrow-right" size="md"/>
             </More>
         </Container>
     );
